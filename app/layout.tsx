@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Fraunces } from "next/font/google"
 import "./globals.css"
 import "leaflet/dist/leaflet.css"
@@ -13,6 +13,12 @@ const fraunces = Fraunces({
   subsets: ["latin", "latin-ext"],
   variable: "--font-serif",
 })
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#f5f1e8",
+}
 
 export const metadata: Metadata = {
   title: "Blisko Seniora — wiedza, wsparcie i codzienna więź",
