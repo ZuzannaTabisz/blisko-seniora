@@ -7,7 +7,6 @@ import { Toaster } from "@/components/ui/sonner"
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-sans",
-  weight: ["400", "500", "600", "700"],
 })
 
 const fraunces = Fraunces({
