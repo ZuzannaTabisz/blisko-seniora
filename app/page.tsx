@@ -11,7 +11,7 @@ import { CaregiverPreview } from "@/components/home/caregiver-preview"
 
 export default function HomePage() {
   return (
-    <>
+    <div className="min-h-screen">
       <Navbar />
       <main>
         <Hero />
@@ -24,6 +24,6 @@ export default function HomePage() {
         <CaregiverPreview />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
