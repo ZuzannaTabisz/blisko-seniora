@@ -124,10 +124,10 @@ export function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-2 lg:flex">
-          <Button asChild variant="ghost" size="sm" className="rounded-full">
+          <Button asChild variant="ghost" size="sm" className="rounded-full justify-center">
             <Link href="/contact">Kontakt</Link>
           </Button>
-          <Button asChild size="sm" className="rounded-full">
+          <Button asChild size="sm" className="rounded-full justify-center">
             <Link href="/ask">Zadaj pytanie</Link>
           </Button>
         </div>
@@ -161,10 +161,10 @@ export function Navbar() {
               ))}
             </nav>
             <div className="mt-4 flex gap-2">
-              <Button asChild variant="outline" className="flex-1 rounded-full">
+              <Button asChild variant="outline" className="flex-1 rounded-full justify-center">
                 <Link href="/contact">Kontakt</Link>
               </Button>
-              <Button asChild className="flex-1 rounded-full">
+              <Button asChild className="flex-1 rounded-full justify-center">
                 <Link href="/ask">Zadaj pytanie</Link>
               </Button>
             </div>
