@@ -34,12 +34,12 @@ export function ArticleCard({
       <Link
         href={href}
         className={cn(
-          "group relative block overflow-hidden rounded-3xl border border-border bg-card transition-all hover:shadow-xl hover:-translate-y-0.5",
+          "group relative block overflow-hidden rounded-2xl sm:rounded-3xl border border-border bg-card transition-all hover:shadow-xl hover:-translate-y-0.5",
           className,
         )}
       >
-        <div className="grid md:grid-cols-[1fr_1fr]">
-          <div className="relative aspect-[4/3]">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1fr]">
+          <div className="relative aspect-[4/3] md:aspect-[3/4]">
             <Image
               src={imgSrc || "/placeholder.svg"}
               alt={article.title}
@@ -50,7 +50,7 @@ export function ArticleCard({
             {cat && (
               <span
                 className={cn(
-                  "absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full border bg-white/90 px-3 py-1 text-xs font-medium backdrop-blur",
+                  "absolute left-3 top-3 sm:left-4 sm:top-4 inline-flex items-center gap-1.5 rounded-full border bg-white/90 px-2.5 sm:px-3 py-1 text-xs font-medium backdrop-blur",
                   cat.color,
                 )}
               >
@@ -59,24 +59,24 @@ export function ArticleCard({
               </span>
             )}
           </div>
-          <div className="flex flex-col justify-between gap-6 p-6 md:p-8">
+          <div className="flex flex-col justify-between gap-4 sm:gap-6 p-4 sm:p-6 md:p-8">
             <div>
               <p className="text-xs font-medium uppercase tracking-[0.14em] text-primary">
                 Polecane dziś
               </p>
-              <h3 className="mt-3 font-display text-2xl font-semibold leading-tight text-balance md:text-3xl">
+              <h3 className="mt-2 sm:mt-3 font-display text-xl sm:text-2xl md:text-3xl font-semibold leading-tight text-balance">
                 {article.title}
               </h3>
-              <p className="mt-3 text-muted-foreground text-pretty">
+              <p className="mt-2 sm:mt-3 text-sm md:text-base text-muted-foreground text-pretty line-clamp-3 md:line-clamp-none">
                 {article.summary}
               </p>
             </div>
-            <div className="flex items-center justify-between text-sm text-muted-foreground">
+            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs sm:text-sm text-muted-foreground">
               <span className="inline-flex items-center gap-1.5">
                 <Clock className="h-4 w-4" />
                 {article.readingMinutes} min czytania
               </span>
-              <span className="inline-flex items-center gap-1 font-medium text-primary group-hover:gap-2 transition-all">
+              <span className="inline-flex items-center gap-1 font-medium text-primary group-hover:gap-2 transition-all whitespace-nowrap">
                 Przeczytaj <ArrowUpRight className="h-4 w-4" />
               </span>
             </div>
