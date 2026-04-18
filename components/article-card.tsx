@@ -38,14 +38,14 @@ export function ArticleCard({
           className,
         )}
       >
-        <div className="grid md:grid-cols-[1.1fr_1fr]">
-          <div className="relative aspect-[4/3] md:aspect-auto">
+        <div className="grid md:grid-cols-[1fr_1fr]">
+          <div className="relative aspect-[4/3]">
             <Image
               src={imgSrc || "/placeholder.svg"}
               alt={article.title}
               fill
               className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
-              sizes="(min-width: 768px) 55vw, 100vw"
+              sizes="(min-width: 768px) 50vw, 100vw"
             />
             {cat && (
               <span
